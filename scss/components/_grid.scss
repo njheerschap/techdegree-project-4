@@ -1,0 +1,66 @@
+.container {
+    padding: 0 10px;
+    @include for-lg-screen {
+        max-width: 1400px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+  }
+
+  .centered {
+  @include for-lg-screen {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  }
+  
+  .row {
+    display: flex;
+    flex-direction: column;
+    padding: 1em 10px;
+
+    @include for-lg-screen {
+        flex-direction: row;
+    }
+  }
+  
+  [class^=col] {
+    margin-top: 10px;
+    flex-basis: 100%;
+    min-height: 25px;
+    padding: 10px;
+    border-radius: 5px;
+
+    @include for-lg-screen {
+        display: flex;
+        justify-content: center;
+        margin-top: 0;
+        align-items: center;
+    }
+  }
+
+  [class^=col] + [class^=col] {
+    @include for-lg-screen {
+        margin-left: 10px;
+    }
+  }
+
+  @for $i from 1 through 12 {
+      .theme.col-#{$i} {
+          background-color: adjust-hue($color-primary-opac, $i * 30%)
+                            
+        }
+    }
+  
+  @for $i from 1 through 12 {
+      @include for-lg-screen {
+        .col-#{$i} {
+            flex-basis: round($i * (25% / 3) * 100) / 100 ;
+        }
+    }
+}
+    .card {
+    flex-basis: 100%;
+  }
