@@ -5,7 +5,7 @@
     border: none;
     padding: 10px 0;
     text-transform: $caps;
-    border-radius: 5px;
+    border-radius: $bdr-rad;
 
     @include for-lg-screen {
         padding: 10px 30px;
