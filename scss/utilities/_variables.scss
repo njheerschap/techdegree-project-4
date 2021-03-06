@@ -13,8 +13,17 @@ $color-error: #e4757a;
 $color-info: #927bc1;
 $color-success: #63cc82;
 $color-warn: #fd7856;
+$color-error-light: lighten($color-error, 15%);
+$color-info-light: lighten($color-info, 15%);
+$color-success-light: lighten($color-success, 15%);
+$color-warn-light: lighten($color-warn, 15%);
 
 
+// Text Transform
+$caps: uppercase;
+
+//Border Radius
+$bdr-rad: 5px;
 
 // Media queries
 

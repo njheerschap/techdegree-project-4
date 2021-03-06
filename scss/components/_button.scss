@@ -4,7 +4,7 @@
     color: $white;
     border: none;
     padding: 10px 0;
-    text-transform: uppercase;
+    text-transform: $caps;
     border-radius: 5px;
 
     @include for-lg-screen {
@@ -21,20 +21,39 @@
   .default {
     background-color: $color-accent;
   }
+
+  .default:hover {
+    background-color: $color-accent-light;
+  }
   
   .error {
     background-color: $color-error;
+  }
+
+  .error:hover {
+    background-color: $color-error-light;
   }
   
   .info {
     background-color: $color-info;
   }
+
+  .info:hover {
+    background-color: $color-info-light;
+  }
   
   .success {
     background-color: $color-success;
+  }
+
+  .success:hover {
+    background-color: $color-success-light;
   }
   
   .warning {
     background-color: $color-warn;
   }
   
+  .warning:hover {
+    background-color: $color-warn-light;
+  }
